@@ -26,13 +26,18 @@ const questions = [
   },
   {
     type: "input",
-    message: "Enter contribution guidelines:",
-    name: "contributingInput",
+    message: "Enter credit and citations:",
+    name: "creditInput",
   },
   {
     type: "input",
-    message: "Enter test instructions:",
-    name: "testsInput",
+    message: "Enter licensing information:",
+    name: "licensingInput",
+  },
+  {
+    type: "input",
+    message: "Enter feature description(s):",
+    name: "featureInput",
   },
 ];
 
@@ -55,8 +60,9 @@ function init() {
       descriptionInput,
       installationInput,
       usageInput,
-      contributingInput,
-      testsInput,
+      creditInput,
+      licensingInput,
+      featureInput,
     } = response;
 
     const readmeContent = `
@@ -65,6 +71,13 @@ function init() {
 ## Description
 ${descriptionInput}
 
+## Table of Contents
+- [Installation]
+- [Usage]
+- [Credits]
+- [License]
+- [Features]
+
 ## Installation
 ${installationInput}
 
@@ -72,10 +85,13 @@ ${installationInput}
 ${usageInput}
 
 ## Contributing
-${contributingInput}
+${creditInput}
 
-## Tests
-${testsInput}
+## License
+${licensingInput}
+
+## Features
+${featureInput}
 `;
 
     writeToFile("README2.md", readmeContent);
