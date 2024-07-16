@@ -35,11 +35,11 @@ THEN I am taken to the corresponding section of the README
 
 ## Walkthrough
 
-*  Link: https://drive.google.com/file/d/1n0AYd4JRILGNcnvRMkUElSQ8xVhHiZZj/view 
+*  Link: https://drive.google.com/file/d/17F5Fm0FNfQn9iw3yg5hOL42v0ehfttUt/view
 
 *   GIF: 
 
-    ![Walkthrough of app use](./Assets/walkthrough.gif)
+    ![Walkthrough of app use](./Assets/Walkthrough.gif)
 
 ## Credits
 

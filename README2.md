@@ -1,5 +1,6 @@
 
 # Cool Project Name
+### [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 Description of Cool Project
@@ -7,21 +8,25 @@ Description of Cool Project
 ## Table of Contents
 - [Installation]
 - [Usage]
-- [Credits]
 - [License]
-- [Features]
+- [Contributing]
+- [Tests]
+- [Questions] 
 
 ## Installation
 N/A
 
 ## Usage
-Use in VSCode to create a ReadMe file
-
-## Contributing
-Class - 09-Node.js
+For creating a readme file via Node.js
 
 ## License
-MIT Example
+This application is covered under the MIT license.
 
-## Features
+## Contributing
+BCS course instruction
+
+## Tests
 N/A
+
+## Questions
+For additional questions, please contact https://github.com/bldambtn or email bldambtn@gmail.com. Thank you.

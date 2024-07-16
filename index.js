@@ -25,19 +25,30 @@ const questions = [
     name: "usageInput",
   },
   {
+    type: "list",
+    message: "Choose a license for your application:",
+    name: "licenseInput",
+    choices: ["MIT", "Apache", "GPL", "BSD"],
+  },
+  {
     type: "input",
-    message: "Enter credit and citations:",
+    message: "Enter contributing information:",
     name: "creditInput",
   },
   {
     type: "input",
-    message: "Enter licensing information:",
-    name: "licensingInput",
+    message: "Enter testing details:",
+    name: "testInput",
   },
   {
     type: "input",
-    message: "Enter feature description(s):",
-    name: "featureInput",
+    message: "Enter your GhitHub username:",
+    name: "questionInput1",
+  },
+  {
+    type: "input",
+    message: "Enter your email address:",
+    name: "questionInput2",
   },
 ];
 
@@ -60,13 +71,18 @@ function init() {
       descriptionInput,
       installationInput,
       usageInput,
+      licenseInput,
       creditInput,
-      licensingInput,
-      featureInput,
+      testInput,
+      questionInput1,
+      questionInput2,
     } = response;
+
+    const licenseBadge = `[![License: ${licenseInput}](https://img.shields.io/badge/License-${licenseInput}-brightgreen.svg)](https://opensource.org/licenses/${licenseInput})`;
 
     const readmeContent = `
 # ${titleInput}
+### ${licenseBadge}
 
 ## Description
 ${descriptionInput}
@@ -74,9 +90,10 @@ ${descriptionInput}
 ## Table of Contents
 - [Installation]
 - [Usage]
-- [Credits]
 - [License]
-- [Features]
+- [Contributing]
+- [Tests]
+- [Questions] 
 
 ## Installation
 ${installationInput}
@@ -84,14 +101,17 @@ ${installationInput}
 ## Usage
 ${usageInput}
 
+## License
+This application is covered under the ${licenseInput} license.
+
 ## Contributing
 ${creditInput}
 
-## License
-${licensingInput}
+## Tests
+${testInput}
 
-## Features
-${featureInput}
+## Questions
+For additional questions, please contact https://github.com/${questionInput1} or email ${questionInput2}. Thank you.
 `;
 
     writeToFile("README2.md", readmeContent);
